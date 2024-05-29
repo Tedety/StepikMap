@@ -55,6 +55,9 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="PictureBoxStructure.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -85,9 +88,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AnyFiles\Flags1.txt" />
+    <Content Include="bin\Debug\Images\castle.png" />
     <Content Include="bin\Debug\Images\RedFlag.jpg" />
     <Content Include="bin\Debug\Images\RedFlag2.png" />
-    <Content Include="bin\Debug\Images\диназвар.png" />
+    <Content Include="bin\Debug\Images\cave.png" />
     <None Include="bin\Debug\Images\Карта.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

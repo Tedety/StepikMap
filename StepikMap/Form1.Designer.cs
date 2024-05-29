@@ -31,7 +31,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMap));
             this.pictureBoxMap = new System.Windows.Forms.PictureBox();
-            this.buttonLoadFlags = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMap)).BeginInit();
             this.SuspendLayout();
             // 
@@ -41,21 +40,14 @@
             this.pictureBoxMap.Name = "pictureBoxMap";
             this.pictureBoxMap.TabStop = false;
             // 
-            // buttonLoadFlags
-            // 
-            resources.ApplyResources(this.buttonLoadFlags, "buttonLoadFlags");
-            this.buttonLoadFlags.Name = "buttonLoadFlags";
-            this.buttonLoadFlags.UseVisualStyleBackColor = true;
-            this.buttonLoadFlags.Click += new System.EventHandler(this.buttonLoadFlags_Click);
-            // 
             // FormMap
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.buttonLoadFlags);
             this.Controls.Add(this.pictureBoxMap);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FormMap";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMap)).EndInit();
             this.ResumeLayout(false);
 
@@ -64,7 +56,6 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBoxMap;
-        private System.Windows.Forms.Button buttonLoadFlags;
     }
 }
 

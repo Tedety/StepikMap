@@ -1,15 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Drawing.Configuration;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace StepikMap
 {
@@ -17,32 +9,22 @@ namespace StepikMap
     {
         const string pathFlagsLocation = @"C:\Users\Tpyma\Desktop\Anteiku\Работа\Курсовая 1\StepikMap\StepikMap\AnyFiles\Flags1.txt";
 
+        private int screenWidth = System.Windows.Forms.Screen.PrimaryScreen.Bounds.Width;
+        private int screenHeight = System.Windows.Forms.Screen.PrimaryScreen.Bounds.Height;
+
+        public List<PictureBoxStructure> structures = new List<PictureBoxStructure>();
+
         public FormMap()
         {
             InitializeComponent();
-        }
+            pictureBoxMap.Width = screenWidth;
+            pictureBoxMap.Height = screenHeight;
 
-        //private void pictureBoxMap_MouseDown(object sender, MouseEventArgs e)
-        //{
-        //    PictureBoxFlag pictureBoxFlag = new PictureBoxFlag(e.X, e.Y, this);
-        //    pictureBoxFlag.Parent = pictureBoxMap;
-        //}
-
-        private void buttonLoadFlags_Click(object sender, EventArgs e)
-        {
-            var flagsLocation = File.ReadAllLines(pathFlagsLocation);
-            var flags = new List<PictureBoxFlag>();
-
-            for (int i = 0; i < flagsLocation.Length; i++)
+            structures = new List<PictureBoxStructure>()
             {
-                var location = flagsLocation[i].Split();
-                int x = Convert.ToInt32(location[0]) - 16, y = Convert.ToInt32(location[1]) -16;
-
-
-                flags.Add(new PictureBoxFlag(x, y, this));
-                flags[i].Parent = pictureBoxMap;
-            }
-
+                new PictureBoxStructure(150, 250, this, @"Images\cave.png", pictureBoxMap),
+                new PictureBoxStructure(1000, 300, this, @"Images\castle.png", pictureBoxMap)
+            };
         }
     }
 }
