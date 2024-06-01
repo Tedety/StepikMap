@@ -23,8 +23,14 @@ namespace StepikMap
             structures = new List<PictureBoxStructure>()
             {
                 new PictureBoxStructure(150, 250, this, @"Images\cave.png", pictureBoxMap),
-                new PictureBoxStructure(1000, 300, this, @"Images\castle.png", pictureBoxMap)
+                new PictureBoxStructure(1000, 300, this, @"Images\castle.png", pictureBoxMap),
+                new PictureBoxStructure(550, 550, this , @"Images\Swamp.png", pictureBoxMap)
             };
+        }
+
+        private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
+        {
+
         }
     }
 }

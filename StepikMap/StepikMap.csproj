@@ -92,6 +92,7 @@
     <Content Include="bin\Debug\Images\RedFlag.jpg" />
     <Content Include="bin\Debug\Images\RedFlag2.png" />
     <Content Include="bin\Debug\Images\cave.png" />
+    <Content Include="bin\Debug\Images\Swamp.png" />
     <None Include="bin\Debug\Images\Карта.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
