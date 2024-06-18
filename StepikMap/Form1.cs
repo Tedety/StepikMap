@@ -1,18 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
+﻿using System.Collections.Generic;
 using System.Windows.Forms;
+using System.IO;
+using System;
+using System.Data;
 
 namespace StepikMap
 {
     public partial class FormMap : Form
     {
-        const string pathFlagsLocation = @"C:\Users\Tpyma\Desktop\Anteiku\Работа\Курсовая 1\StepikMap\StepikMap\AnyFiles\Flags1.txt";
+        private readonly int screenWidth = Screen.PrimaryScreen.Bounds.Width;
+        private readonly int screenHeight = Screen.PrimaryScreen.Bounds.Height;
 
-        private int screenWidth = System.Windows.Forms.Screen.PrimaryScreen.Bounds.Width;
-        private int screenHeight = System.Windows.Forms.Screen.PrimaryScreen.Bounds.Height;
+        public List<Structure> structures = new List<Structure>();
 
-        public List<PictureBoxStructure> structures = new List<PictureBoxStructure>();
+        public static int FreeFlags = 0;
+
 
         public FormMap()
         {
@@ -20,17 +22,34 @@ namespace StepikMap
             pictureBoxMap.Width = screenWidth;
             pictureBoxMap.Height = screenHeight;
 
-            structures = new List<PictureBoxStructure>()
+            structures = new List<Structure>()
             {
-                new PictureBoxStructure(150, 250, this, @"Images\cave.png", pictureBoxMap),
-                new PictureBoxStructure(1000, 300, this, @"Images\castle.png", pictureBoxMap),
-                new PictureBoxStructure(550, 550, this , @"Images\Swamp.png", pictureBoxMap)
+                new Structure(150, 250, this, @"Images\cave.png", pictureBoxMap),
+                new Structure(1000, 300, this, @"Images\castle.png", pictureBoxMap),
+                new Structure(550, 550, this , @"Images\Swamp.png", pictureBoxMap)
             };
         }
 
-        private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
+        private void buttonReadData_Click(object sender, EventArgs e)
         {
+            Clear();
 
+            FormReadData formReadData = new FormReadData();
+            formReadData.Show();
+        }
+
+        private void buttonPlaceFlags_Click(object sender, EventArgs e)
+        { }
+
+        private void Clear()
+        {
+            Student.Students.Clear();
+            Flag.CheckPointFlags.Clear();
+        }
+
+        public static void labelFreeFlags_Count()
+        {
+            labelFreeFlag.Text = "Свободных флагов: " + FreeFlags;
         }
     }
 }

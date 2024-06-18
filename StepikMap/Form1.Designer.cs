@@ -31,9 +31,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMap));
             this.pictureBoxMap = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.buttonPlaceFlags = new System.Windows.Forms.Button();
+            this.buttonReadData = new System.Windows.Forms.Button();
+            labelFreeFlag = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMap)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBoxMap
@@ -42,32 +43,48 @@
             this.pictureBoxMap.Name = "pictureBoxMap";
             this.pictureBoxMap.TabStop = false;
             // 
-            // pictureBox1
+            // buttonPlaceFlags
             // 
-            resources.ApplyResources(this.pictureBox1, "pictureBox1");
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
+            resources.ApplyResources(this.buttonPlaceFlags, "buttonPlaceFlags");
+            this.buttonPlaceFlags.Name = "buttonPlaceFlags";
+            this.buttonPlaceFlags.UseVisualStyleBackColor = true;
+            this.buttonPlaceFlags.Click += new System.EventHandler(this.buttonPlaceFlags_Click);
+            // 
+            // buttonReadData
+            // 
+            resources.ApplyResources(this.buttonReadData, "buttonReadData");
+            this.buttonReadData.Name = "buttonReadData";
+            this.buttonReadData.UseVisualStyleBackColor = true;
+            this.buttonReadData.Click += new System.EventHandler(this.buttonReadData_Click);
+            // 
+            // labelFreeFlag
+            // 
+            resources.ApplyResources(labelFreeFlag, "labelFreeFlag");
+            labelFreeFlag.Name = "labelFreeFlag";
             // 
             // FormMap
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(labelFreeFlag);
+            this.Controls.Add(this.buttonReadData);
+            this.Controls.Add(this.buttonPlaceFlags);
             this.Controls.Add(this.pictureBoxMap);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FormMap";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMap)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBoxMap;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button buttonPlaceFlags;
+        private System.Windows.Forms.Button buttonReadData;
+        public static System.Windows.Forms.Label labelFreeFlag;
     }
 }
 

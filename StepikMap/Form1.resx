@@ -20217,27 +20217,84 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;pictureBoxMap.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="buttonPlaceFlags.Location" type="System.Drawing.Point, System.Drawing">
+    <value>32, 29</value>
+  </data>
+  <data name="buttonPlaceFlags.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 44</value>
+  </data>
+  <data name="buttonPlaceFlags.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>243, 132</value>
+  <data name="buttonPlaceFlags.Text" xml:space="preserve">
+    <value>Разместить флажки</value>
   </data>
-  <data name="pictureBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 50</value>
+  <data name="&gt;&gt;buttonPlaceFlags.Name" xml:space="preserve">
+    <value>buttonPlaceFlags</value>
   </data>
-  <data name="pictureBox1.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+  <data name="&gt;&gt;buttonPlaceFlags.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;pictureBox1.Name" xml:space="preserve">
-    <value>pictureBox1</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;buttonPlaceFlags.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;buttonPlaceFlags.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="buttonReadData.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="buttonReadData.Location" type="System.Drawing.Point, System.Drawing">
+    <value>32, 101</value>
+  </data>
+  <data name="buttonReadData.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 44</value>
+  </data>
+  <data name="buttonReadData.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="buttonReadData.Text" xml:space="preserve">
+    <value>Считать данные</value>
+  </data>
+  <data name="&gt;&gt;buttonReadData.Name" xml:space="preserve">
+    <value>buttonReadData</value>
+  </data>
+  <data name="&gt;&gt;buttonReadData.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonReadData.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;buttonReadData.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="labelFreeFlag.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelFreeFlag.Location" type="System.Drawing.Point, System.Drawing">
+    <value>29, 172</value>
+  </data>
+  <data name="labelFreeFlag.Size" type="System.Drawing.Size, System.Drawing">
+    <value>137, 16</value>
+  </data>
+  <data name="labelFreeFlag.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="labelFreeFlag.Text" xml:space="preserve">
+    <value>Свободных флагов: </value>
+  </data>
+  <data name="&gt;&gt;labelFreeFlag.Name" xml:space="preserve">
+    <value>labelFreeFlag</value>
+  </data>
+  <data name="&gt;&gt;labelFreeFlag.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelFreeFlag.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labelFreeFlag.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
