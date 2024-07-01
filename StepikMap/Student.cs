@@ -1,15 +1,14 @@
 ﻿using System.Collections.Generic;
-using static StepikMap.FlagColor;
 
 namespace StepikMap
 {
     public class Student
     {
         public static List<Student> Students = new List<Student>();
-        public string Name { get; set; }
-        public string Surname { get; set; }
-        public double[] Points { get; set; }
-        public FlagColor Color {  get; set; }
+        public string Name;
+        public string Surname;
+        public double[] Points;
+        public FlagColor Color;
 
         public Student(string name, string surname, double[] points, FlagColor color)
         {

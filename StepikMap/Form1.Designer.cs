@@ -20,7 +20,7 @@
             base.Dispose(disposing);
         }
 
-            
+
         #region Код, автоматически созданный конструктором форм Windows
 
         /// <summary>
@@ -42,6 +42,7 @@
             resources.ApplyResources(this.pictureBoxMap, "pictureBoxMap");
             this.pictureBoxMap.Name = "pictureBoxMap";
             this.pictureBoxMap.TabStop = false;
+            this.pictureBoxMap.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FormMap_MouseDown);
             // 
             // buttonPlaceFlags
             // 

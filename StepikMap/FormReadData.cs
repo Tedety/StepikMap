@@ -2,6 +2,7 @@
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
+using static StepikMap.Student;
 
 namespace StepikMap
 {
@@ -24,10 +25,10 @@ namespace StepikMap
             textPath.Text = openFileDialog.FileName;
             ReadenData = File.ReadAllLines(textPath.Text);
 
-            int cnt = 0;
+            int cnt = 1;
             foreach (string student in ReadenData)
             {
-                string[] splitedStudent = student.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries);
+                string[] splitedStudent = student.Split(new char[] { ',' });
                 string name = splitedStudent[0];
                 string surname = splitedStudent[1];
 
@@ -39,12 +40,12 @@ namespace StepikMap
                     points[i] = Convert.ToDouble(point);
                 }
 
-                Student.Students.Add(new Student(name, surname, points, (FlagColor)cnt));
+                Students.Add(new Student(name, surname, points, (FlagColor)cnt));
                 cnt++;
-                if (cnt == 9) break;
+                if (cnt == 7) break;
             }
 
-            FormMap.FreeFlags = points.Length; 
+            FormMap.FreeFlags = points.Length;
             FormMap.labelFreeFlags_Count();
 
             Close();

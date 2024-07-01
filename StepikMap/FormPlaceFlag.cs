@@ -5,18 +5,16 @@ namespace StepikMap
 {
     public partial class FormPlaceFlag : Form
     {
-        public Structure clickedStructure;
-        public Form formOfStructure;
+        public Form form;
         public int Flag_X;
         public int Flag_Y;
 
-        public FormPlaceFlag(Form formOfStructure, Structure clickedPictureBoxStructure, int flag_X, int flag_Y)
+        public FormPlaceFlag(Form formOfStructure, int flag_X, int flag_Y)
         {
             InitializeComponent();
-            clickedStructure = clickedPictureBoxStructure;
             Flag_X = flag_X;
             Flag_Y = flag_Y;
-            this.formOfStructure = formOfStructure;
+            form = formOfStructure;
             CountFlags();
         }
 
@@ -25,23 +23,21 @@ namespace StepikMap
             FormMap.FreeFlags--;
             CountFlags();
             PlaceFlag();
+
             FormMap.labelFreeFlags_Count();
-            Flag.CheckPointFlags.Add(new Flag(Flag_X, Flag_Y, formOfStructure));
             Close();
-            Flag.BringToUpFlags();
         }
 
         public void PlaceFlag()
         {
-            var newFlag = new Flag(Flag_X, Flag_Y, formOfStructure);
+            var newFlag = new Flag(Flag_X, Flag_Y, form);
             newFlag.BringToFront();
-            newFlag.Parent = clickedStructure;
             Flag.CheckPointFlags.Add(newFlag);
         }
 
         public void CountFlags()
         {
-            labelCountFlags.Text = $"Осталось разместить флагов: {FormMap.FreeFlags}";
+            labelCountFlags.Text = $"Осталось разместить флажков-чекпоинтов: {FormMap.FreeFlags}";
         }
     }
 }

@@ -26,34 +26,6 @@ namespace StepikMap
             Parent = pictureBox;
             Width *= 2;
             Height *= 2;
-
-
-            // Список всех точек, которые занимает Структура
-            for (int i = x; i < x + Height; i++)
-            {
-                for (int j = y; j < y + Width; j++)
-                {
-                    listOfPoints.Add(new Point(i, j));
-                }
-            }
-
-            MouseDown += new MouseEventHandler(PictureBoxStructure_MouseDown);
-        }
-
-        private void PictureBoxStructure_MouseDown(object sender, MouseEventArgs e)
-        {
-            if (FormMap.FreeFlags == 0)
-            {
-                MessageBox.Show("Нет свободных флагов");
-            }
-
-            else
-            {
-                Structure structure = sender as Structure;
-
-                FormPlaceFlag formPlaceFlag = new FormPlaceFlag(form, structure, e.X, e.Y);
-                formPlaceFlag.ShowDialog();
-            }
         }
     }
 }
